@@ -1,0 +1,28 @@
+<!-- myapp/ping.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Your Info</h1>
+<form action="/myapp/pong/" method="POST">
+    {% csrf_token %}
+    <div>
+        <label for="myname">이름: </label>
+        <input type="text" id="myname" name="myname">
+    </div>
+
+    <div>
+        <label for="age">나이: </label>
+        <input type="number" id="age" name="age">
+    </div>
+
+    <div>
+        <label for="mbti">MBTI: </label>
+        <input type="text" id="mbti" name="mbti">
+    </div>
+
+    <div>
+        <input type="submit" value="얍!">
+    </div>
+</form>
+
+{% endblock content %}

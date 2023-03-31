@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% comment %} form의 action이 비어있으면=> 현재 form을 보고있는 URL로 보낸다 {% endcomment %}
+{% comment %} 지금 현재 URL로 보낸다 {% endcomment %}
+<form action="/blog/create/" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    {% comment %} as_p는 요소들을 p태그 안에 넣어둠 {% endcomment %}
+
+
+
+    <div>
+        <button>GO</button>
+    </div>
+</form>
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+

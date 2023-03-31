@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>학생</h1>
+
+
+<div>
+    <ul>
+        {% for student in students %}
+            <li>
+           
+                <a href="{% url 'detail' student.pk %}">{{student.name}}</a>
+                {% comment %} 리팩토링으로 할려면 이렇게 해야함 {% endcomment %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+
+{% endblock content %}

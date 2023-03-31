@@ -1,0 +1,90 @@
+<!-- 07_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form</h1>
+
+    <!-- 양식 -->
+    <!-- method="GET" => 여기 있는 입력 데이터는 남들이 봐도 상관이 없다 -->
+    <!-- method="POST" => 여기 있는 입력 데이터는 보이면 안된다. -->
+    <form action="URL(이 데이터를 제출(요청)할 URL)" method = "POST">
+
+        <div>
+            
+            <label for="username">id </label>
+            <input type="text" id = "username" reuqired autofocus>
+            <!-- required 무조건 필요하다 autofocus 새로고침할때 커서가 있음 -->
+            <!-- for이 id를 지정함 ㅇㅇ -->
+        </div>
+        
+        <div>
+
+            <label for="password">password </label>
+            <input type="password" id = "password">
+
+        </div>
+
+        <div>
+            <label for="my-email">email </label>
+            <input type="email" id ="my-email" placeholder="email은 @를 포함합니다.">
+        </div>
+        
+        <div>
+            <label for="age">age </label>
+            <input type="number" id = "age" value ="20">
+        </div>
+
+        <div>
+            <input type="checkbox" id ="apple" value="apple"> <label for="apple">사과</label>
+            <input type="checkbox" value ="banana">바나나
+            <input type="checkbox" value = "strawberry">딸기
+        </div>
+
+            <!-- value가 있어야 서버로 값이 submit 됌 -->
+
+        <div>
+            <input type="radio"  name ="gender" value="male">남자
+            <input type="radio" name ="gender" value="female">여자
+            <input type="radio" name ="gender" value="nonetype">둘다아님
+        </div>
+        <!-- name이 같음으로서 3개중 1개만 체크 가능 -->
+
+
+        <div>
+
+            <input type="submit" value ="얍!">
+
+        </div>
+    
+    </form>
+
+
+    <hr>
+
+    <div>
+        <input type="color">
+        <input type="email">
+        <input type="number">
+        <input type="radio">
+        <input type="checkbox">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+
+
+    <hr>
+
+    <form action="https://search.naver.com/search.naver">
+        <label for="keyword"> 검색어:</label>
+        <input type="text" name ="query" id="keyword">        
+    </form>
+</body>
+</html>
